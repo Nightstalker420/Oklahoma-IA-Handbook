@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +5,81 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Oklahoma RP Internal Affairs Handbook</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    header {
+      background-color: #003366;
+      color: #fff;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #0055a5;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      padding: 0.75rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      transition: opacity 0.2s;
+    }
+
+    nav a:hover {
+      opacity: 0.8;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 1rem;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    section {
+      margin-bottom: 2rem;
+    }
+
+    h1, h2 {
+      color: #003366;
+    }
+
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #003366;
+      color: #fff;
+      margin-top: 2rem;
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -25,73 +98,74 @@
 
   <main class="container">
     <section id="welcome">
-      <p><strong>Welcome to the Official Internal Affairs (IA) Handbook for Oklahoma RP.</strong> This document outlines the protocols, responsibilities, and standards expected of Internal Affairs staff and those subject to review. It promotes transparency, fairness, and accountability within our department.</p>
+      <p><strong>Welcome to the Official Internal Affairs (IA) Handbook for Oklahoma RP.</strong> This guide outlines the protocols, responsibilities, and standards expected of IA staff and those subject to review. We’re committed to transparency, fairness, and accountability.</p>
     </section>
 
     <section id="mission">
       <h2>Mission Statement</h2>
-      <p>The mission of the Internal Affairs Division is to uphold integrity, transparency, and fairness in all operations. IA ensures all personnel meet the highest standards of professionalism and conduct.</p>
+      <p>Our mission is to ensure the highest standards of professionalism, ethics, and behavior among our personnel. The Internal Affairs Division works to uphold trust through impartial investigations and transparent practices.</p>
     </section>
 
     <section id="roles">
       <h2>Roles and Responsibilities</h2>
       <h3>IA Agent Responsibilities</h3>
       <ul>
-        <li>Impartially investigate allegations of misconduct</li>
-        <li>Preserve confidentiality and neutrality</li>
-        <li>Maintain comprehensive and timely records</li>
-        <li>Monitor compliance across departments</li>
+        <li>Conduct fair, unbiased investigations</li>
+        <li>Maintain confidentiality and neutrality</li>
+        <li>Document findings accurately and timely</li>
+        <li>Monitor department compliance</li>
       </ul>
       <h3>IA Supervisor Responsibilities</h3>
       <ul>
-        <li>Oversee and assign investigations</li>
-        <li>Evaluate agent reports and findings</li>
-        <li>Recommend corrective or disciplinary actions</li>
+        <li>Assign and oversee investigations</li>
+        <li>Review reports and evidence thoroughly</li>
+        <li>Recommend appropriate corrective actions</li>
       </ul>
     </section>
 
     <section id="process">
       <h2>Investigation Process</h2>
       <ol>
-        <li>Receive and log complaint</li>
-        <li>Assign to an IA agent</li>
-        <li>Collect and review all relevant evidence</li>
-        <li>Conduct interviews and compile findings</li>
-        <li>Supervisor reviews and makes recommendations</li>
-        <li>Case outcome documented and archived</li>
+        <li>Receive and log the complaint</li>
+        <li>Assign case to an IA agent</li>
+        <li>Gather all relevant evidence</li>
+        <li>Conduct interviews and document findings</li>
+        <li>Supervisor reviews the report</li>
+        <li>Final decision and archiving</li>
       </ol>
     </section>
 
     <section id="reporting">
       <h2>Reporting a Complaint</h2>
-      <p>Complaints should be submitted through our official ticket system with supporting evidence. All reports are handled confidentially and with care. Once received, you will receive updates throughout the process.</p>
+      <p>All complaints must be submitted via the official ticketing system with any available evidence. Every report is treated with confidentiality and respect. Updates will be provided throughout the process.</p>
     </section>
 
     <section id="misconduct">
       <h2>Types of Misconduct</h2>
       <ul>
-        <li>Abuse of power or authority</li>
-        <li>Harassment, discrimination, or bias</li>
-        <li>Corruption or unethical actions</li>
-        <li>Neglect of duty or violation of procedures</li>
+        <li>Abuse of power or excessive force</li>
+        <li>Discrimination, harassment, or bias</li>
+        <li>Unethical or corrupt behavior</li>
+        <li>Failure to follow standard procedures</li>
       </ul>
     </section>
 
     <section id="discipline">
       <h2>Disciplinary Actions</h2>
       <ul>
-        <li><strong>Verbal Warning:</strong> Initial corrective feedback</li>
-        <li><strong>Written Reprimand:</strong> Documented warning in personnel file</li>
-        <li><strong>Training/Retraining:</strong> Reeducation on policy or behavior</li>
+        <li><strong>Verbal Warning:</strong> Informal correction</li>
+        <li><strong>Written Reprimand:</strong> Documented warning</li>
+        <li><strong>Training/Retraining:</strong> Policy education</li>
         <li><strong>Suspension:</strong> Temporary removal from duty</li>
-        <li><strong>Demotion:</strong> Lowering of rank/responsibilities</li>
-        <li><strong>Termination:</strong> Dismissal from the department</li>
+        <li><strong>Demotion:</strong> Reduction in rank/responsibility</li>
+        <li><strong>Termination:</strong> Removal from the department</li>
       </ul>
     </section>
 
     <footer>
-      <p>Oklahoma RP &copy; 2025 | Internal Affairs Division | All rights reserved</p>
+      <p>&copy; 2025 Oklahoma RP | Internal Affairs Division | All Rights Reserved</p>
     </footer>
   </main>
 </body>
 </html>
+
