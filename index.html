@@ -1,22 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Oklahoma RP Internal Affairs Handbook</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
   <meta property="og:title" content="Oklahoma RP Internal Affairs Handbook" />
   <meta property="og:description" content="Your guide to professionalism, integrity, and accountability in Oklahoma RP Internal Affairs." />
-  <meta property="og:image" content="https://media.discordapp.net/attachments/1370780533205766206/1386381145087934605/IA.webp?ex=68597f8e&is=68582e0e&hm=2b82a024daf0ac5f2cd6cd73d96ad0b0dff346a0679dfe79885dbfda8baf83bb&=&format=webp&width=648&height=648" />
-  <meta property="og:url" content="https://yourusername.github.io/your-repo-name/" />
+  <meta property="og:image" content="https://media.discordapp.net/attachments/1370780533205766206/1386381145087934605/IA.webp" />
+  <meta property="og:url" content="https://nightstalker420.github.io/oklahoma-ia-handbook/" />
   <meta property="og:type" content="website" />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
   <style>
     body {
       font-family: 'Roboto', sans-serif;
       margin: 0;
       background-color: #f5f5f5;
       color: #333;
-      transition: background-color 0.3s, color 0.3s;
+      transition: background 0.3s, color 0.3s;
     }
     header {
       background-color: #003366;
@@ -24,9 +24,17 @@
       text-align: center;
       padding: 1.5rem 1rem;
     }
-    header img {
-      max-width: 150px;
-      margin-bottom: 10px;
+    .toggle-container {
+      text-align: center;
+      margin-top: 1rem;
+    }
+    .toggle-btn {
+      background-color: #003366;
+      color: white;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
     }
     nav {
       background-color: #0055a5;
@@ -71,60 +79,43 @@
     ul, ol {
       padding-left: 1.5rem;
     }
-    .dark-mode {
-      background-color: #121212;
-      color: #eee;
-    }
-    .dark-mode .container {
-      background: #1e1e1e;
-      color: #eee;
-    }
-    .dark-mode header,
-    .dark-mode nav,
-    .dark-mode footer {
-      background-color: #222;
-      color: white;
-    }
-    .toggle-container {
-      text-align: center;
-      margin: 1rem 0;
-    }
-    button.toggle-btn {
-      background: #0055a5;
-      color: white;
-      border: none;
-      padding: 0.5rem 1rem;
-      font-weight: bold;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-    .link-section {
-      text-align: center;
-      margin-top: -1rem;
-      margin-bottom: 2rem;
-    }
-    .link-section a {
-      color: #0055a5;
-      font-weight: bold;
-      text-decoration: underline;
-    }
     @media (max-width: 600px) {
       nav {
         flex-direction: column;
         align-items: center;
       }
     }
+
+    /* Dark mode */
+    body.dark-mode {
+      background-color: #121212;
+      color: #eee;
+    }
+    body.dark-mode header,
+    body.dark-mode nav,
+    body.dark-mode .toggle-btn {
+      background-color: #1e1e1e;
+      color: #fff;
+    }
+    body.dark-mode .container {
+      background-color: #1e1e1e;
+      color: #eee;
+      box-shadow: none;
+    }
+    body.dark-mode a {
+      color: #90cdf4;
+    }
   </style>
 </head>
 <body>
   <header>
-    <img src="https://media.discordapp.net/attachments/1370780533205766206/1386381145087934605/IA.webp?ex=68597f8e&is=68582e0e&hm=2b82a024daf0ac5f2cd6cd73d96ad0b0dff346a0679dfe79885dbfda8baf83bb&=&format=webp&width=648&height=648" alt="IA Logo">
     <h1>Oklahoma RP Internal Affairs Handbook</h1>
     <p>Your guide to professionalism, integrity, and accountability</p>
+    <img src="https://media.discordapp.net/attachments/1370780533205766206/1386381145087934605/IA.webp" alt="IA Logo" width="150" />
   </header>
 
   <div class="toggle-container">
-    <button class="toggle-btn" onclick="document.body.classList.toggle('dark-mode')">Toggle Light/Dark Mode</button>
+    <button class="toggle-btn">Toggle Light/Dark Mode</button>
   </div>
 
   <nav>
@@ -141,17 +132,121 @@
   </nav>
 
   <main class="container">
-    <section class="link-section">
-      <p>📎 View the IA Handbook Google Doc: <a href="https://docs.google.com/document/d/1qt-Wpz59r9EK1ZXM23xiyXlrlwz1JHAZmcXLZz5KxU0/edit?tab=t.0" target="_blank">Click Here</a></p>
+    <section id="welcome">
+      <p><strong>Welcome to the Official Internal Affairs Handbook for Oklahoma RP.</strong> This guide outlines protocols, responsibilities, and expectations of IA members to ensure accountability and fairness across the server.</p>
+      <p>📄 View our Google Doc version: <a href="https://docs.google.com/document/d/1qt-Wpz59r9EK1ZXM23xiyXlrlwz1JHAZmcXLZz5KxU0/edit?usp=sharing" target="_blank">IA Handbook on Google Docs</a></p>
     </section>
 
-    <!-- 🔽 Internal Affairs Training Section -->
+    <section id="mission">
+      <h2>Mission Statement</h2>
+      <p>The Internal Affairs Division upholds integrity by investigating allegations of misconduct, enforcing department standards, and preserving trust within Oklahoma RP.</p>
+    </section>
+
+    <section id="roles">
+      <h2>Roles and Responsibilities</h2>
+      <h3>IA Agent</h3>
+      <ul>
+        <li>Investigate complaints fairly and thoroughly</li>
+        <li>Ensure neutrality and confidentiality</li>
+        <li>Collect and analyze evidence</li>
+        <li>Submit detailed reports to supervisors</li>
+      </ul>
+      <h3>IA Supervisor</h3>
+      <ul>
+        <li>Oversee investigation processes</li>
+        <li>Review and validate agent reports</li>
+        <li>Determine and assign disciplinary actions</li>
+      </ul>
+    </section>
+
+    <section id="process">
+      <h2>Investigation Process</h2>
+      <ol>
+        <li>Complaint submitted via ticket system or form</li>
+        <li>Assigned to an available IA Agent</li>
+        <li>Evidence and witness statements collected</li>
+        <li>Agent interviews involved parties</li>
+        <li>Findings written and submitted to Supervisor</li>
+        <li>Supervisor reviews and issues a ruling</li>
+        <li>Case is logged and archived</li>
+      </ol>
+    </section>
+
+    <section id="tickets">
+      <h2>Step-by-Step: Handling a Deputy Report Ticket</h2>
+      <ol>
+        <li>Claim the ticket and introduce yourself.</li>
+        <li>Ask for:
+          <ul>
+            <li>Incident summary</li>
+            <li>Date/time</li>
+            <li>Evidence (screenshots/clips)</li>
+            <li>Usernames/badge numbers</li>
+          </ul>
+        </li>
+        <li>Ask clarifying questions.</li>
+        <li>Interview mentioned parties privately.</li>
+        <li>Log findings in the IA Case Log.</li>
+        <li>Submit findings to IA Supervisor.</li>
+      </ol>
+    </section>
+
+    <section id="pawa">
+      <h2>How to Use the PAWA Bot for Recording</h2>
+      <p>Use <code>/record</code> in a channel to start a recording in an IA voice chat. PAWA bot helps document interviews and formal discussions.</p>
+      <ol>
+        <li>Join the IA VC.</li>
+        <li>Type <code>/record</code>.</li>
+        <li>PAWA will join and begin recording.</li>
+        <li>Say clearly the session is recorded and all parties agree.</li>
+        <li>To stop, type <code>/record stop</code>.</li>
+      </ol>
+      <p><strong>Misuse will result in disciplinary action.</strong></p>
+    </section>
+
+    <section id="reporting">
+      <h2>Reporting a Complaint</h2>
+      <p>File reports using tickets or the IA Complaint Form. Include all evidence. IA staff will keep it confidential and provide updates.</p>
+    </section>
+
+    <section id="misconduct">
+      <h2>Types of Misconduct</h2>
+      <ul>
+        <li>Abuse of power</li>
+        <li>Harassment or discrimination</li>
+        <li>Corruption or unethical actions</li>
+        <li>Negligence of duties</li>
+      </ul>
+    </section>
+
+    <section id="discipline">
+      <h2>Disciplinary Actions</h2>
+      <ul>
+        <li><strong>Verbal Warning:</strong> Informal coaching</li>
+        <li><strong>Written Reprimand:</strong> Logged warning</li>
+        <li><strong>Retraining:</strong> Policy re-education</li>
+        <li><strong>Suspension:</strong> Temp removal from duties</li>
+        <li><strong>Demotion:</strong> Rank reduction</li>
+        <li><strong>Termination:</strong> Full removal from department</li>
+      </ul>
+    </section>
+
+    <section id="zero">
+      <h2>Zero Tolerance Policy</h2>
+      <p>Strictly enforced for:</p>
+      <ul>
+        <li>Misuse of IA powers</li>
+        <li>Harassment or retaliation</li>
+        <li>Evidence tampering or leaking</li>
+        <li>Corruption or unauthorized actions</li>
+      </ul>
+    </section>
+
     <section id="training">
       <h2>📘 Internal Affairs Training Guide</h2>
-      <p><strong>Division:</strong> Internal Affairs Unit<br/>
-         <strong>Department:</strong> Oklahoma RP<br/>
-         <strong>Trainer:</strong> IA Command / IA Training Team<br/>
-         <strong>Version:</strong> 2025.1</p>
+      <p><strong>Division:</strong> Internal Affairs Unit<br>
+      <strong>Trainer:</strong> IA Command / Training Team<br>
+      <strong>Version:</strong> 2025.1</p>
 
       <h3>🧭 Table of Contents</h3>
       <ul>
@@ -159,112 +254,47 @@
         <li>🧑‍⚖️ IA Responsibilities & Expectations</li>
         <li>📁 Case Handling Process</li>
         <li>🧾 Ticket Review & Evidence Collection</li>
-        <li>🧪 Interview & Interrogation Techniques</li>
-        <li>⚖️ Determining Outcomes & Writing Reports</li>
-        <li>🔧 Tools & Systems Overview</li>
-        <li>🧑‍🏫 Mock Case Training</li>
+        <li>🧪 Interview Techniques</li>
+        <li>⚖️ Outcomes & Report Writing</li>
+        <li>🔧 Tools & Systems</li>
+        <li>🧑‍🏫 Mock Case</li>
         <li>🏁 Final Evaluation</li>
-        <li>📜 Certification Requirements</li>
+        <li>📜 Certification</li>
       </ul>
 
-      <h3>1. 🛠️ Introduction to Internal Affairs</h3>
-      <p>IA ensures accountability, fairness, and professionalism.<br/>
-         Upholds server rules, code of conduct, and public trust.<br/>
-         IA members remain impartial and do not take sides.</p>
-
-      <h3>2. 🧑‍⚖️ Responsibilities & Expectations</h3>
+      <h3>Key Points:</h3>
       <ul>
-        <li>Review complaints and incident reports.</li>
-        <li>Investigate staff or officer misconduct.</li>
-        <li>Maintain confidentiality and neutrality.</li>
-        <li>Communicate clearly and professionally.</li>
-        <li>Report to IA Command or Oklahoma Leadership.</li>
-      </ul>
-
-      <h3>3. 📁 Case Handling Process</h3>
-      <ol>
-        <li>Receive complaint (ticket, bot report, or form).</li>
-        <li>Log the case using IA Tracker or Database.</li>
-        <li>Assign case number and investigator.</li>
-        <li>Notify involved parties.</li>
-        <li>Collect evidence.</li>
-        <li>Conduct interviews.</li>
-        <li>Submit findings to IA Command.</li>
-        <li>Apply disciplinary recommendation.</li>
-        <li>File report in IA archive.</li>
-      </ol>
-
-      <h3>4. 🧾 Ticket Review & Evidence Collection</h3>
-      <ul>
-        <li>Use /transcript or /record (PAWA) in ticket channels.</li>
-        <li>Organize and label all evidence clearly.</li>
-        <li>Screenshots must include timestamps.</li>
-        <li>Verify authenticity of all content.</li>
-      </ul>
-
-      <h3>5. 🧪 Interview & Interrogation Techniques</h3>
-      <ul>
-        <li>Remain calm and respectful.</li>
-        <li>Use neutral language.</li>
-        <li>Avoid assumptions; ask direct questions.</li>
-        <li>Log interviews or record with PAWA.</li>
-      </ul>
-
-      <h3>6. ⚖️ Determining Outcomes & Writing Reports</h3>
-      <p>Use the IA report template and include:</p>
-      <ul>
-        <li>Incident summary</li>
-        <li>Evidence list</li>
-        <li>Findings</li>
-        <li>Conclusion & recommendation</li>
-      </ul>
-
-      <h3>7. 🔧 Tools & Systems Overview</h3>
-      <ul>
-        <li>PAWA Bot: /record in IA channels</li>
-        <li>Google Docs: Shared report templates</li>
-        <li>IA Tracker Sheet: Log and manage cases</li>
-        <li>Embed Bots (e.g. Discohook): Post notices</li>
-      </ul>
-
-      <h3>8. 🧑‍🏫 Mock Case Training</h3>
-      <ul>
-        <li>Trainer creates a scenario.</li>
-        <li>Trainees must collect evidence.</li>
-        <li>Conduct mock interviews.</li>
-        <li>Submit final IA report to trainer panel.</li>
-      </ul>
-
-      <h3>9. 🏁 Final Evaluation</h3>
-      <ul>
-        <li>Written scenario exam</li>
-        <li>Mock case evaluation</li>
-        <li>Conduct review</li>
-        <li>Passing score: 85%</li>
-      </ul>
-
-      <h3>10. 📜 Certification Requirements</h3>
-      <ul>
-        <li>Complete all 10 steps</li>
-        <li>Show skill in reporting & investigation</li>
-        <li>Pass final review by IA Command</li>
+        <li><strong>Intro:</strong> Understand fairness, trust, and RP professionalism.</li>
+        <li><strong>Roles:</strong> Handle misconduct, maintain neutrality.</li>
+        <li><strong>Cases:</strong> Log, number, investigate, report.</li>
+        <li><strong>Evidence:</strong> Use /transcript and /record properly.</li>
+        <li><strong>Interviews:</strong> Ask neutral questions, document.</li>
+        <li><strong>Reports:</strong> Include summary, findings, conclusions.</li>
+        <li><strong>Mock Case:</strong> Practice full investigation.</li>
+        <li><strong>Final:</strong> Pass written + scenario test (85%).</li>
       </ul>
     </section>
+
+    <footer>
+      <p>&copy; 2025 Oklahoma RP | Internal Affairs Division</p>
+    </footer>
   </main>
 
-  <footer>
-    <p>&copy; 2025 Oklahoma RP | Internal Affairs Division | All Rights Reserved</p>
-  </footer>
-
   <script>
-    if (localStorage.getItem('dark-mode') === 'true') {
-      document.body.classList.add('dark-mode');
-    }
-    document.querySelector('.toggle-btn').addEventListener('click', () => {
-      const isDark = document.body.classList.toggle('dark-mode');
-      localStorage.setItem('dark-mode', isDark);
+    window.addEventListener('DOMContentLoaded', () => {
+      const body = document.body;
+      const toggleBtn = document.querySelector('.toggle-btn');
+      if (localStorage.getItem('dark-mode') === 'true') {
+        body.classList.add('dark-mode');
+      }
+      toggleBtn.addEventListener('click', () => {
+        body.classList.toggle('dark-mode');
+        const isDark = body.classList.contains('dark-mode');
+        localStorage.setItem('dark-mode', isDark);
+      });
     });
   </script>
 </body>
 </html>
+
 
