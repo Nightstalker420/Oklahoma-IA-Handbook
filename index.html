@@ -9,70 +9,58 @@
     body {
       font-family: 'Roboto', sans-serif;
       margin: 0;
-      padding: 0;
-      background-color: #f4f4f4;
+      background-color: #f5f5f5;
       color: #333;
     }
-
     header {
       background-color: #003366;
-      color: #fff;
-      padding: 1rem;
+      color: white;
       text-align: center;
+      padding: 1.5rem 1rem;
     }
-
     nav {
       background-color: #0055a5;
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 1rem;
       padding: 0.75rem;
+      gap: 1rem;
       position: sticky;
       top: 0;
-      z-index: 1000;
+      z-index: 999;
     }
-
     nav a {
       color: #fff;
       text-decoration: none;
       font-weight: bold;
-      transition: opacity 0.2s;
     }
-
     nav a:hover {
-      opacity: 0.8;
+      text-decoration: underline;
     }
-
     .container {
-      max-width: 900px;
+      max-width: 960px;
       margin: 2rem auto;
       padding: 1rem;
-      background-color: #fff;
+      background: white;
       border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
-
     section {
       margin-bottom: 2rem;
     }
-
-    h1, h2 {
+    h2 {
       color: #003366;
     }
-
-    ul, ol {
-      padding-left: 1.5rem;
-    }
-
     footer {
       text-align: center;
       padding: 1rem;
-      background-color: #003366;
-      color: #fff;
+      background: #003366;
+      color: white;
       margin-top: 2rem;
     }
-
+    ul, ol {
+      padding-left: 1.5rem;
+    }
     @media (max-width: 600px) {
       nav {
         flex-direction: column;
@@ -91,81 +79,122 @@
     <a href="#mission">Mission</a>
     <a href="#roles">Roles</a>
     <a href="#process">Investigation</a>
+    <a href="#tickets">Ticket Guide</a>
+    <a href="#pawa">PAWA Bot</a>
     <a href="#reporting">Reporting</a>
     <a href="#misconduct">Misconduct</a>
     <a href="#discipline">Discipline</a>
+    <a href="#zero">Zero Tolerance</a>
   </nav>
 
   <main class="container">
     <section id="welcome">
-      <p><strong>Welcome to the Official Internal Affairs (IA) Handbook for Oklahoma RP.</strong> This guide outlines the protocols, responsibilities, and standards expected of IA staff and those subject to review. We’re committed to transparency, fairness, and accountability.</p>
+      <p><strong>Welcome to the Official Internal Affairs Handbook for Oklahoma RP.</strong> This guide outlines protocols, responsibilities, and expectations of IA members to ensure accountability and fairness across the server.</p>
     </section>
 
     <section id="mission">
       <h2>Mission Statement</h2>
-      <p>Our mission is to ensure the highest standards of professionalism, ethics, and behavior among our personnel. The Internal Affairs Division works to uphold trust through impartial investigations and transparent practices.</p>
+      <p>The Internal Affairs Division upholds integrity by investigating allegations of misconduct, enforcing department standards, and preserving trust within Oklahoma RP.</p>
     </section>
 
     <section id="roles">
       <h2>Roles and Responsibilities</h2>
-      <h3>IA Agent Responsibilities</h3>
+      <h3>IA Agent</h3>
       <ul>
-        <li>Conduct fair, unbiased investigations</li>
-        <li>Maintain confidentiality and neutrality</li>
-        <li>Document findings accurately and timely</li>
-        <li>Monitor department compliance</li>
+        <li>Investigate complaints fairly and thoroughly</li>
+        <li>Ensure neutrality and confidentiality</li>
+        <li>Collect and analyze evidence</li>
+        <li>Submit detailed reports to supervisors</li>
       </ul>
-      <h3>IA Supervisor Responsibilities</h3>
+      <h3>IA Supervisor</h3>
       <ul>
-        <li>Assign and oversee investigations</li>
-        <li>Review reports and evidence thoroughly</li>
-        <li>Recommend appropriate corrective actions</li>
+        <li>Oversee investigation processes</li>
+        <li>Review and validate agent reports</li>
+        <li>Determine and assign disciplinary actions</li>
       </ul>
     </section>
 
     <section id="process">
       <h2>Investigation Process</h2>
       <ol>
-        <li>Receive and log the complaint</li>
-        <li>Assign case to an IA agent</li>
-        <li>Gather all relevant evidence</li>
-        <li>Conduct interviews and document findings</li>
-        <li>Supervisor reviews the report</li>
-        <li>Final decision and archiving</li>
+        <li>Complaint submitted via ticket system or form</li>
+        <li>Assigned to an available IA Agent</li>
+        <li>Evidence and witness statements collected</li>
+        <li>Agent interviews involved parties</li>
+        <li>Findings written and submitted to Supervisor</li>
+        <li>Supervisor reviews and issues a ruling</li>
+        <li>Case is logged and archived</li>
       </ol>
+    </section>
+
+    <section id="tickets">
+      <h2>Step-by-Step: Handling a Deputy Report Ticket</h2>
+      <ol>
+        <li>Claim the ticket and introduce yourself in a respectful manner.</li>
+        <li>Ask for all necessary details, including:
+          <ul>
+            <li>Incident summary</li>
+            <li>Date/time of the event</li>
+            <li>Screenshot(s) or clip(s)</li>
+            <li>Usernames or badge numbers</li>
+          </ul>
+        </li>
+        <li>Ask any clarifying questions to ensure accuracy.</li>
+        <li>Privately reach out to any mentioned parties for interviews.</li>
+        <li>Document everything in your IA Case Log.</li>
+        <li>Submit your findings to the IA Supervisor for final judgment.</li>
+      </ol>
+    </section>
+
+    <section id="pawa">
+      <h2>How to Use the PAWA Bot in Discord</h2>
+      <p>The PAWA bot is used for managing and tracking IA reports efficiently within Discord.</p>
+      <h3>Basic PAWA Bot Commands</h3>
+      <ul>
+        <li><code>/case create</code> – Opens a new case for investigation</li>
+        <li><code>/case assign [user]</code> – Assigns a case to a specific IA member</li>
+        <li><code>/case addnote [note]</code> – Adds a note or update to a case</li>
+        <li><code>/case close</code> – Closes a completed investigation</li>
+        <li><code>/case view [ID]</code> – View detailed case information</li>
+      </ul>
+      <h3>Best Practices</h3>
+      <ul>
+        <li>Always confirm the case ID before updating it</li>
+        <li>Do not share case links or notes outside IA channels</li>
+        <li>Keep all entries professional and factual</li>
+      </ul>
     </section>
 
     <section id="reporting">
       <h2>Reporting a Complaint</h2>
-      <p>All complaints must be submitted via the official ticketing system with any available evidence. Every report is treated with confidentiality and respect. Updates will be provided throughout the process.</p>
+      <p>To file a report, use the official ticket system or complete the IA Complaint Form. Reports should include all available evidence. IA staff will maintain confidentiality and provide status updates as the case progresses.</p>
     </section>
 
     <section id="misconduct">
       <h2>Types of Misconduct</h2>
       <ul>
         <li>Abuse of power or excessive force</li>
-        <li>Discrimination, harassment, or bias</li>
-        <li>Unethical or corrupt behavior</li>
-        <li>Failure to follow standard procedures</li>
+        <li>Discrimination, harassment, or retaliation</li>
+        <li>Corruption or unethical behavior</li>
+        <li>Neglecting duty or failing to follow policy</li>
       </ul>
     </section>
 
     <section id="discipline">
       <h2>Disciplinary Actions</h2>
       <ul>
-        <li><strong>Verbal Warning:</strong> Informal correction</li>
-        <li><strong>Written Reprimand:</strong> Documented warning</li>
-        <li><strong>Training/Retraining:</strong> Policy education</li>
+        <li><strong>Verbal Warning:</strong> Informal correction and coaching</li>
+        <li><strong>Written Reprimand:</strong> Logged formal warning</li>
+        <li><strong>Retraining:</strong> Policy re-education assignment</li>
         <li><strong>Suspension:</strong> Temporary removal from duty</li>
-        <li><strong>Demotion:</strong> Reduction in rank/responsibility</li>
-        <li><strong>Termination:</strong> Removal from the department</li>
+        <li><strong>Demotion:</strong> Rank reduction due to misconduct</li>
+        <li><strong>Termination:</strong> Removal from Oklahoma RP departments</li>
       </ul>
     </section>
 
-    <footer>
-      <p>&copy; 2025 Oklahoma RP | Internal Affairs Division | All Rights Reserved</p>
-    </footer>
-  </main>
-</body>
-</html>
-
+    <section id="zero">
+      <h2>Zero Tolerance Policy</h2>
+      <p>Oklahoma RP enforces a strict zero tolerance policy on the following:</p>
+      <ul>
+        <li>Intentional misuse of IA powers</li>
+        <li>Harassment, discrimination, or retaliation wi
