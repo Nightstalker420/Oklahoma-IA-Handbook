@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Oklahoma RP Internal Affairs Handbook</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Oklahoma RP Internal Affairs Handbook</h1>
+    <button id="modeToggle">🌙 Toggle Dark Mode</button>
+  </header>
+  <nav>
+    <a href="#mission">Mission</a>
+    <a href="#roles">Roles</a>
+    <a href="#investigation">Investigation</a>
+    <a href="#tickets">Tickets</a>
+    <a href="#pawa">PAWA</a>
+  </nav>
+  <main class="container" role="main">
+    <section id="mission"><h2>Mission Statement</h2><p>...</p></section>
+    <section id="roles"><h2>Roles and Responsibilities</h2><p>...</p></section>
+    <section id="investigation"><h2>Investigation Process</h2><p>...</p></section>
+    <section id="tickets"><h2>Handling Tickets</h2><p>...</p></section>
+    <section id="pawa"><h2>Using PAWA in Discord</h2><p>...</p></section>
+  </main>
+  <script>
+    document.getElementById('modeToggle').onclick = () => {
+      document.body.classList.toggle('dark-mode');
+    };
+  </script>
+</body>
+</html>
