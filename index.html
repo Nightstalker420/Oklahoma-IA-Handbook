@@ -35,13 +35,50 @@
       top: 0;
       z-index: 999;
     }
-    nav a {
+    nav a, nav button {
       color: #fff;
       text-decoration: none;
       font-weight: bold;
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 1rem;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
     }
-    nav a:hover {
+    nav a:hover, nav button:hover {
       text-decoration: underline;
+    }
+    nav .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+    nav .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #0055a5;
+      min-width: 220px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+      padding: 0.5rem 0;
+      border-radius: 4px;
+      top: 100%;
+      left: 0;
+      z-index: 1000;
+      flex-direction: column;
+    }
+    nav .dropdown-content a {
+      display: block;
+      padding: 0.5rem 1rem;
+      color: white;
+      text-decoration: none;
+    }
+    nav .dropdown-content a:hover {
+      background-color: #003366;
+    }
+    nav .dropdown:hover .dropdown-content,
+    nav .dropdown:focus-within .dropdown-content {
+      display: flex;
+      flex-direction: column;
     }
     .container {
       max-width: 960px;
@@ -72,6 +109,12 @@
       nav {
         flex-direction: column;
         align-items: center;
+      }
+      nav .dropdown-content {
+        position: static;
+        box-shadow: none;
+        background-color: #0055a5;
+        width: 100%;
       }
     }
     /* Dark mode styles */
@@ -125,7 +168,22 @@
     <a href="#process">Investigation</a>
     <a href="#tickets">Ticket Guide</a>
     <a href="#pawa">PAWA Bot</a>
-    <a href="#training">Training</a>
+    <div class="dropdown" tabindex="0">
+      <button aria-haspopup="true" aria-expanded="false" aria-controls="training-menu">Training ▼</button>
+      <div id="training-menu" class="dropdown-content" role="menu" aria-label="Training submenu">
+        <a href="#training-overview">Overview</a>
+        <a href="#training-intro">Introduction to Internal Affairs</a>
+        <a href="#training-responsibilities">Responsibilities & Expectations</a>
+        <a href="#training-case-handling">Case Handling Process</a>
+        <a href="#training-ticket-review">Ticket Review & Evidence Collection</a>
+        <a href="#training-interview-techniques">Interview & Interrogation Techniques</a>
+        <a href="#training-determining-outcomes">Determining Outcomes & Writing Reports</a>
+        <a href="#training-tools">Tools & Systems Overview</a>
+        <a href="#training-mock-case">Mock Case Training</a>
+        <a href="#training-final-evaluation">Final Evaluation</a>
+        <a href="#training-certification">Certification Requirements</a>
+      </div>
+    </div>
     <a href="#reporting">Reporting</a>
     <a href="#misconduct">Misconduct</a>
     <a href="#discipline">Discipline</a>
@@ -221,28 +279,16 @@
       <p><strong>⚠️ Misuse of the PAWA Bot (e.g., unauthorized recording or use in non-IA channels) will result in disciplinary action.</strong></p>
     </section>
 
-    <section id="training">
+    <section id="training-overview">
       <h2>📘 Internal Affairs Training Guide</h2>
       <p><strong>Division:</strong> Internal Affairs Unit</p>
       <p><strong>Department:</strong> Oklahoma RP</p>
       <p><strong>Trainer:</strong> IA Command / IA Training Team</p>
       <p><strong>Version:</strong> 2025.1</p>
       <p><strong>Purpose:</strong> To educate IA recruits and probationary agents on procedures, professionalism, and protocol in Internal Affairs investigations.</p>
+    </section>
 
-      <h3>🧭 Table of Contents</h3>
-      <ul>
-        <li>🛠️ Introduction to Internal Affairs</li>
-        <li>🧑‍⚖️ IA Responsibilities & Expectations</li>
-        <li>📁 Case Handling Process</li>
-        <li>🧾 Ticket Review & Evidence Collection</li>
-        <li>🧪 Interview & Interrogation Techniques</li>
-        <li>⚖️ Determining Outcomes & Writing Reports</li>
-        <li>🔧 Tools & Systems Overview (e.g., PAWA Bot, Google Docs)</li>
-        <li>🧑‍🏫 Mock Case Training</li>
-        <li>🏁 Final Evaluation</li>
-        <li>📜 Certification Requirements</li>
-      </ul>
-
+    <section id="training-intro">
       <h3>1. 🛠️ Introduction to Internal Affairs</h3>
       <p>Objective: Help trainees understand the purpose and function of IA in the RP server.</p>
       <ul>
@@ -250,7 +296,9 @@
         <li>Upholds server rules, code of conduct, and public trust.</li>
         <li>IA members remain impartial and do not take sides.</li>
       </ul>
+    </section>
 
+    <section id="training-responsibilities">
       <h3>2. 🧑‍⚖️ Responsibilities & Expectations</h3>
       <ul>
         <li>Review complaints and incident reports.</li>
@@ -259,7 +307,9 @@
         <li>Communicate clearly and professionally.</li>
         <li>Report to IA Command or Oklahoma Leadership as needed.</li>
       </ul>
+    </section>
 
+    <section id="training-case-handling">
       <h3>3. 📁 Case Handling Process</h3>
       <p>Step-by-Step:</p>
       <ol>
@@ -273,7 +323,9 @@
         <li>Apply appropriate disciplinary recommendation.</li>
         <li>File the final report in the IA archive.</li>
       </ol>
+    </section>
 
+    <section id="training-ticket-review">
       <h3>4. 🧾 Ticket Review & Evidence Collection</h3>
       <ul>
         <li>Use /transcript or /record (via PAWA bot) inside IA ticket channels.</li>
@@ -281,7 +333,9 @@
         <li>Screenshots must include timestamps.</li>
         <li>Verify authenticity before accepting anything as fact.</li>
       </ul>
+    </section>
 
+    <section id="training-interview-techniques">
       <h3>5. 🧪 Interview & Interrogation Techniques</h3>
       <ul>
         <li>Remain calm and respectful.</li>
@@ -289,7 +343,9 @@
         <li>Ask for direct answers, avoid assumptions.</li>
         <li>Log interviews in writing or use audio (if server rules allow).</li>
       </ul>
+    </section>
 
+    <section id="training-determining-outcomes">
       <h3>6. ⚖️ Determining Outcomes & Writing Reports</h3>
       <ul>
         <li>Decide if the claim is sustained, unfounded, exonerated, or inconclusive.</li>
@@ -304,7 +360,9 @@
         </li>
         <li>Submit reports to IA Logs and IA Command.</li>
       </ul>
+    </section>
 
+    <section id="training-tools">
       <h3>7. 🔧 Tools & Systems Overview</h3>
       <ul>
         <li>PAWA Bot: Use /record in ticket channels to document chats.</li>
@@ -313,7 +371,9 @@
         <li>IA Tracker Sheet: To log cases and keep status updated.</li>
         <li>Discohook or Embed Bots: For IA notices.</li>
       </ul>
+    </section>
 
+    <section id="training-mock-case">
       <h3>8. 🧑‍🏫 Mock Case Training</h3>
       <ul>
         <li>Trainer will create a fake case scenario (e.g., an officer using excessive force).</li>
@@ -326,7 +386,9 @@
           </ul>
         </li>
       </ul>
+    </section>
 
+    <section id="training-final-evaluation">
       <h3>9. 🏁 Final Evaluation</h3>
       <ul>
         <li>A written exam (scenario-based questions)</li>
@@ -334,7 +396,9 @@
         <li>Professional conduct review</li>
         <li>Minimum passing score: 85%</li>
       </ul>
+    </section>
 
+    <section id="training-certification">
       <h3>10. 📜 Certification Requirements</h3>
       <ul>
         <li>Complete all 10 steps of training</li>
@@ -364,32 +428,32 @@
       <h2>Disciplinary Actions</h2>
       <ul>
         <li><strong>Verbal Warning:</strong> Informal correction and coaching</li>
-        <li><strong>Written Reprimand:</strong> Logged formal warning</li>
-        <li><strong>Retraining:</strong> Policy re-education assignment</li>
-        <li><strong>Suspension:</strong> Temporary removal from duty</li>
-        <li><strong>Demotion:</strong> Rank reduction due to misconduct</li>
-        <li><strong>Termination:</strong> Removal from Oklahoma RP departments</li>
+        <li><strong>Written Reprimand:</strong> Formal documentation of misconduct</li>
+        <li><strong>Suspension:</strong> Temporary removal from duties</li>
+        <li><strong>Termination:</strong> Permanent removal from department</li>
       </ul>
     </section>
 
     <section id="zero">
       <h2>Zero Tolerance Policy</h2>
-      <p>Oklahoma RP enforces a strict zero tolerance policy on the following:</p>
+      <p>Oklahoma RP Internal Affairs maintains a strict zero tolerance policy regarding:</p>
       <ul>
-        <li>Intentional misuse of IA powers</li>
-        <li>Harassment, discrimination, or retaliation within the department</li>
-        <li>Case tampering, evidence falsification, or breach of confidentiality</li>
-        <li>Any form of corruption or abuse of internal systems</li>
+        <li>Corruption and bribery</li>
+        <li>Harassment and discrimination</li>
+        <li>Falsifying evidence or reports</li>
+        <li>Unauthorized recording or privacy violations</li>
+        <li>Abuse of IA powers</li>
       </ul>
-      <p><strong>Any violation will result in immediate suspension pending investigation and possible termination.</strong></p>
+      <p>Violations will result in immediate investigation and potential severe disciplinary actions, including permanent removal and server ban.</p>
     </section>
-
-    <footer>
-      <p>&copy; 2025 Oklahoma RP | Internal Affairs Division | All Rights Reserved</p>
-    </footer>
   </main>
 
+  <footer>
+    <p>© 2025 Oklahoma RP Internal Affairs. All rights reserved.</p>
+  </footer>
+
   <script>
+    // Dark/Light mode toggle
     const toggleBtn = document.getElementById('toggle-theme');
     toggleBtn.addEventListener('click', () => {
       document.body.classList.toggle('dark-mode');
@@ -402,5 +466,6 @@
   </script>
 </body>
 </html>
+
 
 
