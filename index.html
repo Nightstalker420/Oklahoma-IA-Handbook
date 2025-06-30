@@ -3,469 +3,101 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Oklahoma RP Internal Affairs Handbook</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
-  <meta property="og:title" content="Oklahoma RP Internal Affairs Handbook" />
-  <meta property="og:description" content="Your guide to professionalism, integrity, and accountability in Oklahoma RP Internal Affairs." />
-  <meta property="og:image" content="https://raw.githubusercontent.com/Nightstalker420/Oklahoma-IA-Handbook/main/Images/IA%20LOGO%20(1).jpg" />
-  <meta property="og:url" content="https://nightstalker420.github.io/oklahoma-ia-handbook/" />
-  <meta property="og:type" content="website" />
+  <title>IA Case Submission Instructions</title>
   <style>
     body {
-      font-family: 'Roboto', sans-serif;
-      margin: 0;
-      background-color: #f5f5f5;
-      color: #333;
-      transition: background-color 0.3s ease, color 0.3s ease;
-    }
-    header {
-      background-color: #003366;
-      color: white;
-      text-align: center;
-      padding: 1.5rem 1rem;
-    }
-    nav {
-      background-color: #0055a5;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      padding: 0.75rem;
-      gap: 1rem;
-      position: sticky;
-      top: 0;
-      z-index: 999;
-    }
-    nav a, nav button {
-      color: #fff;
-      text-decoration: none;
-      font-weight: bold;
-      background: none;
-      border: none;
-      cursor: pointer;
-      font-size: 1rem;
-      padding: 0;
-      font-family: 'Roboto', sans-serif;
-    }
-    nav a:hover, nav button:hover {
-      text-decoration: underline;
-    }
-    nav .dropdown {
-      position: relative;
-      display: inline-block;
-    }
-    nav .dropdown-content {
-      display: none;
-      position: absolute;
-      background-color: #0055a5;
-      min-width: 220px;
-      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-      padding: 0.5rem 0;
-      border-radius: 4px;
-      top: 100%;
-      left: 0;
-      z-index: 1000;
-      flex-direction: column;
-    }
-    nav .dropdown-content a {
-      display: block;
-      padding: 0.5rem 1rem;
-      color: white;
-      text-decoration: none;
-    }
-    nav .dropdown-content a:hover {
-      background-color: #003366;
-    }
-    nav .dropdown:hover .dropdown-content,
-    nav .dropdown:focus-within .dropdown-content {
-      display: flex;
-      flex-direction: column;
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      padding: 40px;
+      line-height: 1.6;
     }
     .container {
-      max-width: 960px;
-      margin: 2rem auto;
-      padding: 1rem;
+      max-width: 900px;
+      margin: auto;
       background: white;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      transition: background-color 0.3s ease, color 0.3s ease;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
     }
-    section {
-      margin-bottom: 2rem;
-    }
-    h2 {
-      color: #003366;
-    }
-    footer {
+    h1, h2 {
       text-align: center;
-      padding: 1rem;
-      background: #003366;
-      color: white;
-      margin-top: 2rem;
+      color: #2c3e50;
+    }
+    h3 {
+      color: #34495e;
+      margin-top: 30px;
     }
     ul, ol {
-      padding-left: 1.5rem;
+      margin-left: 20px;
     }
-    @media (max-width: 600px) {
-      nav {
-        flex-direction: column;
-        align-items: center;
-      }
-      nav .dropdown-content {
-        position: static;
-        box-shadow: none;
-        background-color: #0055a5;
-        width: 100%;
-      }
-    }
-    /* Dark mode styles */
-    body.dark-mode {
-      background-color: #121212;
-      color: #eee;
-    }
-    body.dark-mode header, body.dark-mode nav {
-      background-color: #222;
-    }
-    body.dark-mode .container {
-      background-color: #1e1e1e;
-      color: #eee;
-      box-shadow: 0 2px 6px rgba(255,255,255,0.1);
-    }
-    body.dark-mode h2 {
-      color: #66aaff;
-    }
-    body.dark-mode footer {
-      background-color: #222;
-      color: #eee;
-    }
-    /* Toggle button */
-    #toggle-theme {
-      position: fixed;
-      top: 10px;
-      right: 10px;
-      background: #0055a5;
-      border: none;
-      color: white;
-      padding: 0.5rem 1rem;
-      border-radius: 4px;
-      cursor: pointer;
-      z-index: 1000;
+    .important {
+      color: #e74c3c;
       font-weight: bold;
+    }
+    .highlight {
+      background-color: #ecf0f1;
+      padding: 10px;
+      border-radius: 6px;
+    }
+    .footer {
+      margin-top: 40px;
+      text-align: center;
+      font-size: 0.9em;
+      color: #777;
     }
   </style>
 </head>
 <body>
-  <button id="toggle-theme" aria-label="Toggle Dark/Light Mode">Dark Mode</button>
+  <div class="container">
+    <h1>🛡️ Internal Affairs Case Submission</h1>
+    <h2>Instruction Sheet – Oklahoma RP IA</h2>
 
-  <header>
-    <img src="https://raw.githubusercontent.com/Nightstalker420/Oklahoma-IA-Handbook/main/Images/IA%20LOGO%20(1).jpg" alt="IA Logo" width="150" style="margin-bottom:1rem;" />
-    <h1>Oklahoma RP Internal Affairs Handbook</h1>
-    <p>Your guide to professionalism, integrity, and accountability</p>
-  </header>
+    <h3>📋 How to Submit a Case Report</h3>
+    <ol>
+      <li><strong>Open the Case Submission Form</strong><br>
+        You will receive a Google Form link from the IA Overseer or Assistant.<br>
+        <span class="important">Keep this link private</span> and do not share it with non-IA members.
+      </li>
 
-  <nav>
-    <a href="#mission">Mission</a>
-    <a href="#roles">Roles</a>
-    <a href="#process">Investigation</a>
-    <a href="#tickets">Ticket Guide</a>
-    <a href="#pawa">PAWA Bot</a>
-    <div class="dropdown" tabindex="0">
-      <button aria-haspopup="true" aria-expanded="false" aria-controls="training-menu">Training ▼</button>
-      <div id="training-menu" class="dropdown-content" role="menu" aria-label="Training submenu">
-        <a href="#training-overview">Overview</a>
-        <a href="#training-intro">Introduction to Internal Affairs</a>
-        <a href="#training-responsibilities">Responsibilities & Expectations</a>
-        <a href="#training-case-handling">Case Handling Process</a>
-        <a href="#training-ticket-review">Ticket Review & Evidence Collection</a>
-        <a href="#training-interview-techniques">Interview & Interrogation Techniques</a>
-        <a href="#training-determining-outcomes">Determining Outcomes & Writing Reports</a>
-        <a href="#training-tools">Tools & Systems Overview</a>
-        <a href="#training-mock-case">Mock Case Training</a>
-        <a href="#training-final-evaluation">Final Evaluation</a>
-        <a href="#training-certification">Certification Requirements</a>
-      </div>
+      <li><strong>Fill Out the Required Fields</strong><br>
+        Complete all parts of the form:
+        <ul>
+          <li><strong>Officer Under Investigation</strong> – Roblox or Discord name.</li>
+          <li><strong>Investigating Staff Member</strong> – Your name as the IA investigator.</li>
+          <li><strong>Date of Incident</strong> – The date the incident occurred.</li>
+          <li><strong>Case Type</strong> – Choose from: Misconduct, Abuse of Power, etc.</li>
+          <li><strong>Incident Description</strong> – A full and detailed report.</li>
+          <li><strong>Upload Evidence</strong> – Screenshots, videos, chat logs (max 10MB).</li>
+          <li><strong>Case Outcome</strong> – Current status of the case (Pending, Warning, etc.).</li>
+          <li><strong>Internal Notes / Comments</strong> – Any extra notes about the case (optional).</li>
+        </ul>
+      </li>
+
+      <li><strong>Submit the Form</strong><br>
+        Review your answers and click <strong>“Submit”</strong> at the bottom. The case will be logged into the department’s secure case tracker.
+      </li>
+    </ol>
+
+    <h3>📌 Reminders & Guidelines</h3>
+    <ul>
+      <li><span class="important">Confidentiality is mandatory</span>. Do not share case info outside IA.</li>
+      <li>Submit cases promptly after incidents are reported.</li>
+      <li>Clearly label all uploaded evidence (e.g., Screenshot_Abuse_6-29.png).</li>
+      <li>For urgent cases, notify a Supervisor or Overseer immediately after submission.</li>
+    </ul>
+
+    <h3>❓ Need Help?</h3>
+    <p class="highlight">
+      If you have trouble submitting or accessing the form, contact your IA Trainer, Assistant Overseer, or Department Overseer.
+    </p>
+
+    <div class="footer">
+      &copy; 2025 Oklahoma RP – Internal Affairs | All rights reserved.
     </div>
-    <a href="#reporting">Reporting</a>
-    <a href="#misconduct">Misconduct</a>
-    <a href="#discipline">Discipline</a>
-    <a href="#zero">Zero Tolerance</a>
-  </nav>
-
-  <main class="container">
-    <section id="welcome">
-      <p><strong>Welcome to the Official Internal Affairs Handbook for Oklahoma RP.</strong> This guide outlines protocols, responsibilities, and expectations of IA members to ensure accountability and fairness across the server.</p>
-    </section>
-
-    <section id="mission">
-      <h2>Mission Statement</h2>
-      <p>The Internal Affairs Division upholds integrity by investigating allegations of misconduct, enforcing department standards, and preserving trust within Oklahoma RP.</p>
-    </section>
-
-    <section id="roles">
-      <h2>Roles and Responsibilities</h2>
-      <h3>IA Agent</h3>
-      <ul>
-        <li>Investigate complaints fairly and thoroughly</li>
-        <li>Ensure neutrality and confidentiality</li>
-        <li>Collect and analyze evidence</li>
-        <li>Submit detailed reports to supervisors</li>
-      </ul>
-      <h3>IA Supervisor</h3>
-      <ul>
-        <li>Oversee investigation processes</li>
-        <li>Review and validate agent reports</li>
-        <li>Determine and assign disciplinary actions</li>
-      </ul>
-    </section>
-
-    <section id="process">
-      <h2>Investigation Process</h2>
-      <ol>
-        <li>Complaint submitted via ticket system or form</li>
-        <li>Assigned to an available IA Agent</li>
-        <li>Evidence and witness statements collected</li>
-        <li>Agent interviews involved parties</li>
-        <li>Findings written and submitted to Supervisor</li>
-        <li>Supervisor reviews and issues a ruling</li>
-        <li>Case is logged and archived</li>
-      </ol>
-    </section>
-
-    <section id="tickets">
-      <h2>Step-by-Step: Handling a Deputy Report Ticket</h2>
-      <ol>
-        <li>Claim the ticket and introduce yourself in a respectful manner.</li>
-        <li>Ask for all necessary details, including:
-          <ul>
-            <li>Incident summary</li>
-            <li>Date/time of the event</li>
-            <li>Screenshot(s) or clip(s)</li>
-            <li>Usernames or badge numbers</li>
-          </ul>
-        </li>
-        <li>Ask any clarifying questions to ensure accuracy.</li>
-        <li>Privately reach out to any mentioned parties for interviews.</li>
-        <li>Document everything in your IA Case Log.</li>
-        <li>Submit your findings to the IA Supervisor for final judgment.</li>
-      </ol>
-    </section>
-
-    <section id="pawa">
-      <h2>How to Use the PAWA Bot for Recording in the IA Office</h2>
-      <p>PAWA Bot is used by Internal Affairs to record interviews, interrogations, and formal case discussions. It helps ensure all proceedings are documented fairly and transparently.</p>
-
-      <h3>Starting a Recording</h3>
-      <ol>
-        <li>Join the appropriate Internal Affairs voice channel.</li>
-        <li>Type <code>/record</code> in any text channel where slash commands are allowed.</li>
-        <li>PAWA will automatically join your voice channel and begin recording.</li>
-        <li>Announce clearly that the session is being recorded and confirm that all parties are aware.</li>
-      </ol>
-
-      <h3>Stopping a Recording</h3>
-      <ol>
-        <li>When the session ends, type <code>/record stop</code>.</li>
-        <li>PAWA will leave the voice channel and finalize the recording.</li>
-        <li>The audio file will be posted to the designated IA logs channel or sent directly depending on configuration.</li>
-      </ol>
-
-      <h3>Best Practices</h3>
-      <ul>
-        <li>Only use PAWA in IA-related voice channels.</li>
-        <li>Never record without informing participants beforehand.</li>
-        <li>Label recordings with case numbers or complaint IDs when saving or logging.</li>
-        <li>Keep all recordings confidential and only accessible to IA command staff.</li>
-      </ul>
-
-      <p><strong>⚠️ Misuse of the PAWA Bot (e.g., unauthorized recording or use in non-IA channels) will result in disciplinary action.</strong></p>
-    </section>
-
-    <section id="training-overview">
-      <h2>📘 Internal Affairs Training Guide</h2>
-      <p><strong>Division:</strong> Internal Affairs Unit</p>
-      <p><strong>Department:</strong> Oklahoma RP</p>
-      <p><strong>Trainer:</strong> IA Command / IA Training Team</p>
-      <p><strong>Version:</strong> 2025.1</p>
-      <p><strong>Purpose:</strong> To educate IA recruits and probationary agents on procedures, professionalism, and protocol in Internal Affairs investigations.</p>
-    </section>
-
-    <section id="training-intro">
-      <h3>1. 🛠️ Introduction to Internal Affairs</h3>
-      <p>Objective: Help trainees understand the purpose and function of IA in the RP server.</p>
-      <ul>
-        <li>IA ensures accountability, fairness, and professionalism.</li>
-        <li>Upholds server rules, code of conduct, and public trust.</li>
-        <li>IA members remain impartial and do not take sides.</li>
-      </ul>
-    </section>
-
-    <section id="training-responsibilities">
-      <h3>2. 🧑‍⚖️ Responsibilities & Expectations</h3>
-      <ul>
-        <li>Review complaints and incident reports.</li>
-        <li>Investigate staff or officer misconduct.</li>
-        <li>Maintain confidentiality and neutrality.</li>
-        <li>Communicate clearly and professionally.</li>
-        <li>Report to IA Command or Oklahoma Leadership as needed.</li>
-      </ul>
-    </section>
-
-    <section id="training-case-handling">
-      <h3>3. 📁 Case Handling Process</h3>
-      <p>Step-by-Step:</p>
-      <ol>
-        <li>Receive complaint (ticket, bot report, or manual form).</li>
-        <li>Log the case using the IA Tracker Sheet or Database.</li>
-        <li>Assign a case number and investigator.</li>
-        <li>Notify involved parties that an investigation has begun.</li>
-        <li>Begin evidence collection (screenshots, videos, chat logs).</li>
-        <li>Conduct interviews or statement reviews.</li>
-        <li>Submit findings to IA Command.</li>
-        <li>Apply appropriate disciplinary recommendation.</li>
-        <li>File the final report in the IA archive.</li>
-      </ol>
-    </section>
-
-    <section id="training-ticket-review">
-      <h3>4. 🧾 Ticket Review & Evidence Collection</h3>
-      <ul>
-        <li>Use /transcript or /record (via PAWA bot) inside IA ticket channels.</li>
-        <li>Organize and label all evidence clearly.</li>
-        <li>Screenshots must include timestamps.</li>
-        <li>Verify authenticity before accepting anything as fact.</li>
-      </ul>
-    </section>
-
-    <section id="training-interview-techniques">
-      <h3>5. 🧪 Interview & Interrogation Techniques</h3>
-      <ul>
-        <li>Remain calm and respectful.</li>
-        <li>Use neutral language (e.g., "Can you walk me through what happened?").</li>
-        <li>Ask for direct answers, avoid assumptions.</li>
-        <li>Log interviews in writing or use audio (if server rules allow).</li>
-      </ul>
-    </section>
-
-    <section id="training-determining-outcomes">
-      <h3>6. ⚖️ Determining Outcomes & Writing Reports</h3>
-      <ul>
-        <li>Decide if the claim is sustained, unfounded, exonerated, or inconclusive.</li>
-        <li>Use the IA report template for final documentation.</li>
-        <li>Reports must include:
-          <ul>
-            <li>Incident summary</li>
-            <li>Evidence list</li>
-            <li>Findings</li>
-            <li>Conclusion & recommendation</li>
-          </ul>
-        </li>
-        <li>Submit reports to IA Logs and IA Command.</li>
-      </ul>
-    </section>
-
-    <section id="training-tools">
-      <h3>7. 🔧 Tools & Systems Overview</h3>
-      <ul>
-        <li>PAWA Bot: Use /record in ticket channels to document chats.</li>
-        <li>Google Docs: For shared IA reports and handbooks.</li>
-        <li>GitHub or Website (if used): For hosting public resources.</li>
-        <li>IA Tracker Sheet: To log cases and keep status updated.</li>
-        <li>Discohook or Embed Bots: For IA notices.</li>
-      </ul>
-    </section>
-
-    <section id="training-mock-case">
-      <h3>8. 🧑‍🏫 Mock Case Training</h3>
-      <ul>
-        <li>Trainer will create a fake case scenario (e.g., an officer using excessive force).</li>
-        <li>Trainees must:
-          <ul>
-            <li>Collect and organize evidence</li>
-            <li>Conduct mock interviews</li>
-            <li>Submit a full IA report</li>
-            <li>Present their findings to a trainer panel</li>
-          </ul>
-        </li>
-      </ul>
-    </section>
-
-    <section id="training-final-evaluation">
-      <h3>9. 🏁 Final Evaluation</h3>
-      <ul>
-        <li>A written exam (scenario-based questions)</li>
-        <li>Evaluation of a mock case</li>
-        <li>Professional conduct review</li>
-        <li>Minimum passing score: 85%</li>
-      </ul>
-    </section>
-
-    <section id="training-certification">
-      <h3>10. 📜 Certification Requirements</h3>
-      <ul>
-        <li>Complete all 10 steps of training</li>
-        <li>Show competence in evidence gathering and report writing</li>
-        <li>Demonstrate professionalism in interviews</li>
-        <li>Pass the final exam and review</li>
-        <li>Receive final approval from IA Command</li>
-      </ul>
-    </section>
-
-    <section id="reporting">
-      <h2>Reporting a Complaint</h2>
-      <p>To file a report, use the official ticket system or complete the IA Complaint Form. Reports should include all available evidence. IA staff will maintain confidentiality and provide status updates as the case progresses.</p>
-    </section>
-
-    <section id="misconduct">
-      <h2>Types of Misconduct</h2>
-      <ul>
-        <li>Abuse of power or excessive force</li>
-        <li>Discrimination, harassment, or retaliation</li>
-        <li>Corruption or unethical behavior</li>
-        <li>Neglecting duty or failing to follow policy</li>
-      </ul>
-    </section>
-
-    <section id="discipline">
-      <h2>Disciplinary Actions</h2>
-      <ul>
-        <li><strong>Verbal Warning:</strong> Informal correction and coaching</li>
-        <li><strong>Written Reprimand:</strong> Formal documentation of misconduct</li>
-        <li><strong>Suspension:</strong> Temporary removal from duties</li>
-        <li><strong>Termination:</strong> Permanent removal from department</li>
-      </ul>
-    </section>
-
-    <section id="zero">
-      <h2>Zero Tolerance Policy</h2>
-      <p>Oklahoma RP Internal Affairs maintains a strict zero tolerance policy regarding:</p>
-      <ul>
-        <li>Corruption and bribery</li>
-        <li>Harassment and discrimination</li>
-        <li>Falsifying evidence or reports</li>
-        <li>Unauthorized recording or privacy violations</li>
-        <li>Abuse of IA powers</li>
-      </ul>
-      <p>Violations will result in immediate investigation and potential severe disciplinary actions, including permanent removal and server ban.</p>
-    </section>
-  </main>
-
-  <footer>
-    <p>© 2025 Oklahoma RP Internal Affairs. All rights reserved.</p>
-  </footer>
-
-  <script>
-    // Dark/Light mode toggle
-    const toggleBtn = document.getElementById('toggle-theme');
-    toggleBtn.addEventListener('click', () => {
-      document.body.classList.toggle('dark-mode');
-      if(document.body.classList.contains('dark-mode')) {
-        toggleBtn.textContent = 'Light Mode';
-      } else {
-        toggleBtn.textContent = 'Dark Mode';
-      }
-    });
-  </script>
+  </div>
 </body>
 </html>
+
 
 
 
