@@ -8,7 +8,7 @@
   <meta property="og:title" content="Oklahoma RP Internal Affairs Handbook" />
   <meta property="og:description" content="Your guide to professionalism, integrity, and accountability in Oklahoma RP Internal Affairs." />
   <meta property="og:image" content="https://raw.githubusercontent.com/Nightstalker420/Oklahoma-IA-Handbook/main/Images/IA%20LOGO%20(1).jpg" />
-  <meta property="og:url" content="https://nightstalker420.github.io/Oklahoma-IA-Handbook/" />
+  <meta property="og:url" content="https://nightstalker420.github.io/oklahoma-ia-handbook/" />
   <meta property="og:type" content="website" />
   <style>
     body {
@@ -151,6 +151,14 @@
       z-index: 1000;
       font-weight: bold;
     }
+    /* Punishment Logs iframe styling */
+    #punishment-logs iframe {
+      width: 100%;
+      height: 600px;
+      border: none;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
   </style>
 </head>
 <body>
@@ -188,28 +196,113 @@
     <a href="#misconduct">Misconduct</a>
     <a href="#discipline">Discipline</a>
     <a href="#zero">Zero Tolerance</a>
-    <a href="#punishment-log">Punishment Log</a>
+    <a href="#punishment-logs">Punishment Logs</a>
   </nav>
 
   <main class="container">
-    <!-- Existing content sections go here -->
+    <!-- All your previous sections here (mission, roles, process, etc.) -->
 
-    <section id="punishment-log">
-      <h2>📋 Submit a Punishment Log</h2>
-      <p>
-        All IA staff must submit punishment logs after reviewing violations. This form ensures documentation, transparency, and proper tracking of disciplinary actions within Oklahoma RP.
-      </p>
-      <iframe 
-        src="https://docs.google.com/forms/d/e/1FAIpQLSd_Gth9MWWKTVVrDPn_0HkRGKfkeA2w5tb6lINFr0T2Itq_KQ/viewform?embedded=true" 
-        width="100%" 
-        height="800" 
-        frameborder="0" 
-        marginheight="0" 
-        marginwidth="0" 
-        loading="lazy"
-        style="border:1px solid #ccc; border-radius:8px;">
-        Loading…
-      </iframe>
+    <section id="welcome">
+      <p><strong>Welcome to the Official Internal Affairs Handbook for Oklahoma RP.</strong> This guide outlines protocols, responsibilities, and expectations of IA members to ensure accountability and fairness across the server.</p>
+    </section>
+
+    <section id="mission">
+      <h2>Mission Statement</h2>
+      <p>The Internal Affairs Division upholds integrity by investigating allegations of misconduct, enforcing department standards, and preserving trust within Oklahoma RP.</p>
+    </section>
+
+    <section id="roles">
+      <h2>Roles and Responsibilities</h2>
+      <h3>IA Agent</h3>
+      <ul>
+        <li>Investigate complaints fairly and thoroughly</li>
+        <li>Ensure neutrality and confidentiality</li>
+        <li>Collect and analyze evidence</li>
+        <li>Submit detailed reports to supervisors</li>
+      </ul>
+      <h3>IA Supervisor</h3>
+      <ul>
+        <li>Oversee investigation processes</li>
+        <li>Review and validate agent reports</li>
+        <li>Determine and assign disciplinary actions</li>
+      </ul>
+    </section>
+
+    <section id="process">
+      <h2>Investigation Process</h2>
+      <ol>
+        <li>Complaint submitted via ticket system or form</li>
+        <li>Assigned to an available IA Agent</li>
+        <li>Evidence and witness statements collected</li>
+        <li>Agent interviews involved parties</li>
+        <li>Findings written and submitted to Supervisor</li>
+        <li>Supervisor reviews and issues a ruling</li>
+        <li>Case is logged and archived</li>
+      </ol>
+    </section>
+
+    <section id="tickets">
+      <h2>Step-by-Step: Handling a Deputy Report Ticket</h2>
+      <ol>
+        <li>Claim the ticket and introduce yourself in a respectful manner.</li>
+        <li>Ask for all necessary details, including:
+          <ul>
+            <li>Incident summary</li>
+            <li>Date/time of the event</li>
+            <li>Screenshot(s) or clip(s)</li>
+            <li>Usernames or badge numbers</li>
+          </ul>
+        </li>
+        <li>Ask any clarifying questions to ensure accuracy.</li>
+        <li>Privately reach out to any mentioned parties for interviews.</li>
+        <li>Document everything in your IA Case Log.</li>
+        <li>Submit your findings to the IA Supervisor for final judgment.</li>
+      </ol>
+    </section>
+
+    <section id="pawa">
+      <h2>How to Use the PAWA Bot for Recording in the IA Office</h2>
+      <p>PAWA Bot is used by Internal Affairs to record interviews, interrogations, and formal case discussions. It helps ensure all proceedings are documented fairly and transparently.</p>
+
+      <h3>Starting a Recording</h3>
+      <ol>
+        <li>Join the appropriate Internal Affairs voice channel.</li>
+        <li>Type <code>/record</code> in any text channel where slash commands are allowed.</li>
+        <li>PAWA will automatically join your voice channel and begin recording.</li>
+        <li>Announce clearly that the session is being recorded and confirm that all parties are aware.</li>
+      </ol>
+
+      <h3>Stopping a Recording</h3>
+      <ol>
+        <li>When the session ends, type <code>/record stop</code>.</li>
+        <li>PAWA will leave the voice channel and finalize the recording.</li>
+        <li>The audio file will be posted to the designated IA logs channel or sent directly depending on configuration.</li>
+      </ol>
+
+      <h3>Best Practices</h3>
+      <ul>
+        <li>Only use PAWA in IA-related voice channels.</li>
+        <li>Never record without informing participants beforehand.</li>
+        <li>Label recordings with case numbers or complaint IDs when saving or logging.</li>
+        <li>Keep all recordings confidential and only accessible to IA command staff.</li>
+      </ul>
+
+      <p><strong>⚠️ Misuse of the PAWA Bot (e.g., unauthorized recording or use in non-IA channels) will result in disciplinary action.</strong></p>
+    </section>
+
+    <!-- Training Sections omitted here for brevity (include all from your original code) -->
+
+    <section id="punishment-logs">
+      <h2>Punishment Logs</h2>
+      <p>Use the form below to log all disciplinary actions taken by Internal Affairs.</p>
+      <iframe
+        src="https://docs.google.com/forms/d/e/1FAIpQLSfCuhZehPqDxH6RLgLa9DdHT7-VcRdbj25eQqPl9D5LkZgKdA/viewform?embedded=true"
+        width="100%"
+        height="700"
+        frameborder="0"
+        marginheight="0"
+        marginwidth="0"
+        >Loading…</iframe>
     </section>
   </main>
 
